@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Klinik Demoları</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petrol:#123a3f;
+  --petrol-deep:#0c2b2f;
+  --porcelain:#faf7f2;
+  --foam:#e3efea;
+  --gold:#c89b5a;
+  --ink:#1c2526;
+  --muted:#5f7274;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Figtree',sans-serif;color:var(--ink);background:var(--porcelain);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:840px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:'Marcellus',serif;font-weight:400}
+header{background:var(--petrol);color:var(--porcelain);padding:64px 0 56px}
+header .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+header h1{font-size:clamp(28px,4vw,40px);margin:14px 0 12px}
+header p{color:rgba(250,247,242,.8);font-size:16px;max-width:56ch}
+main{padding:52px 0 80px}
+.list{display:grid;gap:16px}
+.card{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px solid rgba(18,58,63,.1);border-radius:14px;padding:22px 26px;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(18,58,63,.12)}
+.card .name{font-size:18px;color:var(--petrol);font-weight:600}
+.card .meta{font-size:13.5px;color:var(--muted);margin-top:4px}
+.card .stars{color:var(--gold)}
+.card .go{flex:none;font-size:14px;font-weight:600;color:var(--petrol);display:inline-flex;align-items:center;gap:6px}
+.card:hover .go{color:var(--gold)}
+footer{padding:0 0 60px;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Klinik Paketi · Demo Galerisi</span>
+    <h1>Tek hekim diş klinikleri için hazırlanan örnek siteler</h1>
+    <p>Aşağıdaki her sayfa, ilgili kliniğin gerçek Google verileriyle (isim, adres, telefon, puan) kişiselleştirilmiş bir web sitesi + WhatsApp randevu asistanı demosudur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="list">
+    <a class="card" href="academicdis/">
+      <div>
+        <div class="name">AcademicDiş</div>
+        <div class="meta">Üsküdar · <span class="stars">★★★★★</span> 4.0 (8 yorum)</div>
+      </div>
+      <span class="go">Demoyu gör →</span>
+    </a>
+    <a class="card" href="dis-sanat-agiz-ve-dis-sagligi-poliklinigi/">
+      <div>
+        <div class="name">Diş Sanat Ağız ve Diş Sağlığı Polikliniği</div>
+        <div class="meta">Kadıköy · <span class="stars">★★★★★</span> 5.0 (10 yorum)</div>
+      </div>
+      <span class="go">Demoyu gör →</span>
+    </a>
+    <a class="card" href="ozel-camlica-agiz-ve-dis-sagligi-poliklinigi/">
+      <div>
+        <div class="name">Özel Çamlıca Ağız Ve Diş Sağlığı Polikliniği</div>
+        <div class="meta">Üsküdar · <span class="stars">★★★★★</span> 4.7 (13 yorum)</div>
+      </div>
+      <span class="go">Demoyu gör →</span>
+    </a>
+    <a class="card" href="dis-hekimi-erkin-altinel/">
+      <div>
+        <div class="name">Diş Hekimi Erkin Altınel</div>
+        <div class="meta">Üsküdar · <span class="stars">★★★★★</span> 4.7 (13 yorum)</div>
+      </div>
+      <span class="go">Demoyu gör →</span>
+    </a>
+  </div>
+</main>
+
+<footer>Bu sayfalar tanıtım amaçlı hazırlanmış demolardır.</footer>
+
+</body>
+</html>
