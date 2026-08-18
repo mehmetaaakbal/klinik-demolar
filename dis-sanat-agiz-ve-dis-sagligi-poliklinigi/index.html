@@ -254,7 +254,19 @@ footer{background:var(--petrol-deep);color:rgba(250,247,242,.7);padding:36px 0;f
 </header>
 
 <div class="hero">
-  <video id="heroVideo" class="hero-video" poster="../assets/hero-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <video id="heroVideo" class="hero-video" poster="../assets/hero-poster.jpg" muted autoplay loop playsinline preload="metadata" aria-hidden="true">
+    <source src="../assets/hero-video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+    <source src="../assets/hero-video.mp4" type="video/mp4">
+  </video>
+  <script>
+    (function(){
+      var v = document.getElementById('heroVideo');
+      if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        v.removeAttribute('autoplay');
+        v.pause();
+      }
+    })();
+  </script>
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Kadıköy · Tek Hekim Kliniği</span>
@@ -575,21 +587,6 @@ footer{background:var(--petrol-deep);color:rgba(250,247,242,.7);padding:36px 0;f
 </a>
 
 <script>
-(function(){
-  // hero video: sadece masaustunde ve hareket azaltma tercihi kapaliyken yukle (mobil veri tasarrufu)
-  var isDesktop = window.matchMedia('(min-width: 761px)').matches;
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var video = document.getElementById('heroVideo');
-  if (video && isDesktop && !reduceMotion) {
-    var source = document.createElement('source');
-    source.src = '../assets/hero-video.mp4';
-    source.type = 'video/mp4';
-    video.appendChild(source);
-    video.load();
-    video.play().catch(function(){});
-  }
-})();
-
 (function(){
   // once/sonra kaydiricilari
   var sliders = document.querySelectorAll('[data-ba]');
